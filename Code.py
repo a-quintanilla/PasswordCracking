@@ -1,4 +1,4 @@
-import sys, hashlib, os, bcrypt
+import sys, hashlib, os, bcrypt, itertools
 
 mode = ""
 attack = ""
@@ -68,3 +68,12 @@ if attack == "Dictionary":
             quit()
     print("We couldn't find the password :/")
     quit()
+
+if attack == "Brute Force":
+    alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    for x in itertools.product(alphabet, repeat = password.len()):
+    pas = ''.join(x)
+    print("Trying: %s" % pas)
+    if(pas == password):
+        print("Password found: %s" % pas)
+        quit()
