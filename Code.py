@@ -62,6 +62,12 @@ if attack == "Dictionary":
             check = hashLine.hexdigest()
         elif checkMode("PlainText"):
             check = line.rstrip()
+        elif checkMode("BCrypt"):
+            th = password.rstrip().encode('utf-8')
+            check = ""
+            if bcrypt.checkpw(l, th):
+                print("We found the password! It's " + line)
+                quit()
 
         if check == password:
             print("We found the password! It's " + line)
