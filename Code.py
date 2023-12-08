@@ -39,7 +39,7 @@ for x in arguments:
     elif x == '-B':
         setAttack("Brute Force")
 
-if attack == "Brute Force" and mode is not "PlainText":
+if attack == "Brute Force" and mode != "PlainText":
     print("Sorry, you can only use Brute Force with PlainText :(")
     quit()
 if len(mode) == 0:
