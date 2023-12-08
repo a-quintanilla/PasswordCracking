@@ -81,7 +81,7 @@ if attack == "Brute Force":
     for let in password:
         for x in alphabet:
             if x == let:
-                crakced += x
+                cracked += x
     if cracked == password:
         print("We found the password! It's " + cracked)
         quit()
