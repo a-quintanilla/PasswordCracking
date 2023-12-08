@@ -50,7 +50,7 @@ if len(attack) == 0:
     setAttack("Brute Force")
 
 if attack == "Dictionary":
-    dict = open("10k-most-common")
+    dict = open("10k-most-common.txt", "r")
     print("Checking the dictionary for you ;)")
     for line in dict:
         l = line.rstrip().encode('utf-8')
