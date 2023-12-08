@@ -77,9 +77,12 @@ if attack == "Dictionary":
 
 if attack == "Brute Force":
     alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-    for x in itertools.product(alphabet, repeat = password.len()):
-        pas = ''.join(x)
-        print("Trying: %s" % pas)
-        if(pas == password):
-            print("Password found: %s" % pas)
-            quit()
+    cracked = ""
+    for let in password:
+        for x in alphabet:
+            if x == let:
+                crakced += x
+    if cracked == password:
+        print("We found the password! It's " + cracked)
+        quit()
+        
