@@ -56,10 +56,10 @@ if attack == "Dictionary":
         l = line.rstrip().encode('utf-8')
         if checkMode("MD5"):
             hashedLine = hashlib.md5()
-            check = hashLine.hexdigest()
+            check = hashedLine.hexdigest()
         elif checkMode("SHA-256"):
             hashedLine = hashlib.sha256()
-            check = hashLine.hexdigest()
+            check = hashedLine.hexdigest()
         elif checkMode("PlainText"):
             check = line.rstrip()
         elif checkMode("BCrypt"):
